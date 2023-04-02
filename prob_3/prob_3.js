@@ -1,5 +1,8 @@
 var Pizza = /** @class */ (function () {
-    function Pizza(size, extraCheese, pepperoniToppings, hamToppings, pineappleToppings) {
+    function Pizza(
+    //setting the types of every propierty
+    size, extraCheese, pepperoniToppings, hamToppings, pineappleToppings) {
+        //setting the values for the class
         this._size = size;
         this._extraCheese = extraCheese;
         this._pepperoniToppings = pepperoniToppings;
@@ -56,6 +59,7 @@ var Pizza = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    //function to calculate cost for a determined pizza
     Pizza.prototype.genCost = function () {
         var cost = 0;
         if (this._size === 'small') {
@@ -86,11 +90,12 @@ var Pizza = /** @class */ (function () {
     };
     return Pizza;
 }());
+//testing function
 var pizza = new Pizza('medium', true, 1, 0, 2);
-console.log("Size: ".concat(pizza.size));
-console.log("Extra cheese: ".concat(pizza.extraCheese));
-console.log("Pepperoni toppings: ".concat(pizza.pepperoniToppings));
-console.log("Ham toppings: ".concat(pizza.hamToppings));
-console.log("Pineapple toppings: ".concat(pizza.pineappleToppings));
+console.log("Size: ".concat(pizza.size)); //medium
+console.log("Extra cheese: ".concat(pizza.extraCheese)); //true
+console.log("Pepperoni toppings: ".concat(pizza.pepperoniToppings)); //1
+console.log("Ham toppings: ".concat(pizza.hamToppings)); //0
+console.log("Pineapple toppings: ".concat(pizza.pineappleToppings)); //2
 var cost = pizza.genCost();
-console.log("Cost: $".concat(cost));
+console.log("Cost: $".concat(cost)); //$22

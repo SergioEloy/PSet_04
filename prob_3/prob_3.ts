@@ -1,17 +1,20 @@
-class Pizza {
-    private _size: string;
-    private _extraCheese: boolean;
-    private _pepperoniToppings: number;
-    private _hamToppings: number;
-    private _pineappleToppings: number;
+class Pizza {//setting the class named Pizza
+    private _size: string; //naming a private propierty of the class
+    private _extraCheese: boolean;//naming a private propierty of the class
+    private _pepperoniToppings: number;//naming a private propierty of the class
+    private _hamToppings: number;//naming a private propierty of the class
+    private _pineappleToppings: number;//naming a private propierty of the class
   
     constructor(
+      //setting the types of every propierty
       size: string,
       extraCheese: boolean,
       pepperoniToppings: number,
       hamToppings: number,
       pineappleToppings: number
+
     ) {
+      //setting the values for the class
       this._size = size;
       this._extraCheese = extraCheese;
       this._pepperoniToppings = pepperoniToppings;
@@ -19,46 +22,47 @@ class Pizza {
       this._pineappleToppings = pineappleToppings;
     }
   
-    public get size(): string {
+    public get size(): string {//getter fot the size
       return this._size;
     }
   
-    public set size(size: string) {
+    public set size(size: string) {//setter for the size
       this._size = size;
     }
   
-    public get extraCheese(): boolean {
+    public get extraCheese(): boolean {//getter for extra cheese
       return this._extraCheese;
     }
   
-    public set extraCheese(extraCheese: boolean) {
+    public set extraCheese(extraCheese: boolean) {//setter for extra cheese
       this._extraCheese = extraCheese;
     }
   
-    public get pepperoniToppings(): number {
+    public get pepperoniToppings(): number {//getter for pepperoni
       return this._pepperoniToppings;
     }
   
-    public set pepperoniToppings(pepperoniToppings: number) {
+    public set pepperoniToppings(pepperoniToppings: number) {//setter for pepperoni
       this._pepperoniToppings = pepperoniToppings;
     }
   
-    public get hamToppings(): number {
+    public get hamToppings(): number {//getter for ham
       return this._hamToppings;
     }
   
-    public set hamToppings(hamToppings: number) {
+    public set hamToppings(hamToppings: number) {//setter for ham
       this._hamToppings = hamToppings;
     }
   
-    public get pineappleToppings(): number {
+    public get pineappleToppings(): number {//getter for pineapple
       return this._pineappleToppings;
     }
   
-    public set pineappleToppings(pineappleToppings: number) {
+    public set pineappleToppings(pineappleToppings: number) {//setter for pepperoni
       this._pineappleToppings = pineappleToppings;
     }
   
+    //function to calculate cost for a determined pizza
     public genCost(): number {
       let cost = 0;
   
@@ -87,14 +91,14 @@ class Pizza {
     }
   } 
 
-
+//testing function
 const pizza = new Pizza('medium', true, 1, 0, 2);
 
-console.log(`Size: ${pizza.size}`);
-console.log(`Extra cheese: ${pizza.extraCheese}`);
-console.log(`Pepperoni toppings: ${pizza.pepperoniToppings}`);
-console.log(`Ham toppings: ${pizza.hamToppings}`);
-console.log(`Pineapple toppings: ${pizza.pineappleToppings}`);
+console.log(`Size: ${pizza.size}`);//medium
+console.log(`Extra cheese: ${pizza.extraCheese}`);//true
+console.log(`Pepperoni toppings: ${pizza.pepperoniToppings}`);//1
+console.log(`Ham toppings: ${pizza.hamToppings}`);//0
+console.log(`Pineapple toppings: ${pizza.pineappleToppings}`);//2
 
 const cost = pizza.genCost();
-console.log(`Cost: $${cost}`);
+console.log(`Cost: $${cost}`);//$22
